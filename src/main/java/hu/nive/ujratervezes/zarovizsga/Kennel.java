@@ -1,30 +1,30 @@
 package hu.nive.ujratervezes.zarovizsga;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Kennel {
 
-    private List<Dog> kennel;
+    private List<Dog> dogs = new ArrayList<>();
 
-    public Kennel(List<Dog> kennel) {
-        this.kennel = kennel;
+    public Kennel() {
     }
 
-    public List<Dog> getKennel() {
-        return kennel;
+    public List<Dog> getDogs() {
+        return dogs;
     }
 
     public void addDog(Dog dog) {
 
         if (dog!=null) {
-            kennel.add(dog);
+            dogs.add(dog);
         }
 
     }
 
     public void feedAll() {
 
-        for (Dog d: kennel) {
+        for (Dog d: dogs) {
             d.feed();
         }
 
