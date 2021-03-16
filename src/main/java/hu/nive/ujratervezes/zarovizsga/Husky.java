@@ -1,8 +1,8 @@
 package hu.nive.ujratervezes.zarovizsga;
 
-public class Beagle extends Dog {
+public class Husky extends Dog {
 
-    public Beagle(String name) {
+    public Husky(String name) {
         super(name);
     }
 
@@ -13,7 +13,7 @@ public class Beagle extends Dog {
 
     @Override
     public void play(int hours) {
-        this.happiness = this.getHappiness() + (hours * 2);
+        this.happiness = this.getHappiness() + (hours * 3);
     }
 
 }
