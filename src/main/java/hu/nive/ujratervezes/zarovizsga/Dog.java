@@ -2,12 +2,11 @@ package hu.nive.ujratervezes.zarovizsga;
 
 public abstract class Dog {
 
-    protected String name;
-    protected int happiness;
+    private String name;
+    private int happiness;
 
     public Dog(String name) {
         this.name = name;
-        this.happiness = 0;
     }
 
     public String getName() {
@@ -18,6 +17,10 @@ public abstract class Dog {
         return happiness;
     }
 
-    public void feed() {}
-    public void play(int hours) {}
+    protected void increaseHappiness(int diff) {
+        happiness += diff;
+    }
+
+    public abstract void feed();
+    public abstract void play(int hours);
 }
